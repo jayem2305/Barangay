@@ -83,8 +83,8 @@ CREATE TABLE `feedbacks` (
   `comment_id` int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
   `email` varchar(100) NOT NULL, 
   `name` varchar(200) NOT NULL, 
-  `comment` varchar(500) NOT NULL, 
-  `date` varchar NOT NULL,
+  `comment` varchar(255) NOT NULL, 
+  `date` varchar(255) NOT NULL,
    `time` varchar(100) NOT NULL, 
    `sub_comment_id` int NOT NULL,
     FOREIGN KEY (`sub_comment_id`) REFERENCES `feedbacks`(`feed_id`) 
@@ -197,45 +197,8 @@ CREATE TABLE `user` (
 ALTER TABLE `barangay_officials`
   ADD PRIMARY KEY (`bo_id`);
 
---
--- Indexes for table `events`
---
-ALTER TABLE `events`
-  ADD PRIMARY KEY (`e_id`);
-
-
---
--- Indexes for table `projects`
---
-ALTER TABLE `projects`
-  ADD PRIMARY KEY (`p_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `announcements`
---
-
---
--- AUTO_INCREMENT for table `barangay_officials`
---
-  ALTER TABLE `barangay_officials`
+ALTER TABLE `barangay_officials`
     MODIFY `bo_id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `events`
---
-ALTER TABLE `events`
-  MODIFY `e_id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `projects`
---
-ALTER TABLE `projects`
-  MODIFY `p_id` int NOT NULL AUTO_INCREMENT;
-
 
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

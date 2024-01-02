@@ -1,5 +1,5 @@
 <?php  
-$localhost = "localhost";
+$localhost = "34.87.21.182";
 $username = "root";
 $password = "";
 $dbname = "barangay";
